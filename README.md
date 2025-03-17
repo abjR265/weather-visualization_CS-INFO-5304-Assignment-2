@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Cornell Weather Data Visualization
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive dashboard visualizing temperature data collected near Cornell Tech from 1950 to 2021.
 
-## Available Scripts
+**Live Demo:** [https://abjr265.github.io/weather-visualization_CS-INFO-5304-Assignment-2/](https://abjr265.github.io/weather-visualization_CS-INFO-5304-Assignment-2/)
 
-In the project directory, you can run:
+## Project Overview
 
-### `npm start`
+This project was developed as part of CS/INFO 5304 Assignment 2. It processes and visualizes historical weather data to analyze temperature patterns over different time scales.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Monthly Average Temperatures
+- Line plot showing average temperature (in Fahrenheit) for each month
+- Interactive tooltips displaying exact temperature values
+- Clear visual representation of seasonal patterns
 
-### `npm test`
+### Yearly Temperature Trends
+- Time series visualization of yearly average temperatures (1950-2021)
+- Horizontal reference line at 55°F
+- Identification of 1953 as the first year exceeding 55°F
+- Visual analysis of warming patterns over decades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Long-term Temperature Trends
+- Area chart visualizing temperature changes over the entire period
+- Interactive tooltips showing specific temperature values by year
+- Visualization of gradual warming trend over 70+ years
 
-### `npm run build`
+### Temperature Converter
+- Interactive tool demonstrating Kelvin to Fahrenheit/Celsius conversion
+- Real-time conversion as values are entered
+- Display of the conversion formula: F = (K - 273.15) × (9/5) + 32
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technical Implementation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Built With
+- React.js for component architecture and state management
+- Recharts for interactive data visualization
+- PapaParse for CSV data processing
+- React Hooks (useState, useEffect) for state and lifecycle management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Key Components
+- Main `WeatherVisualization` component coordinating data and UI
+- Specialized chart components for each visualization type
+- Data processing pipeline for temperature conversions and aggregations
+- Tab-based navigation for intuitive user experience
 
-### `npm run eject`
+## Running Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository
+   ```
+   git clone https://github.com/abjr265/weather-visualization_CS-INFO-5304-Assignment-2.git
+   cd weather-visualization_CS-INFO-5304-Assignment-2
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Install dependencies
+   ```
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Run the development server
+   ```
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Open http://localhost:3000 in your browser
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project is configured for GitHub Pages deployment:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm run deploy
+```
 
-### Code Splitting
+## Data Source
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The visualization uses weather data collected near Cornell Tech from 1950 to 2021, with temperature values originally provided in Kelvin and converted to Fahrenheit for analysis.
 
-### Analyzing the Bundle Size
+## Creator
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Developed by Abhijay Rane (ar2536@cornell.edu) for CS/INFO 5304 Assignment 2.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is part of academic coursework and is not licensed for commercial use.
